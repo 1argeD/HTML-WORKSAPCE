@@ -1,0 +1,34 @@
+fieldset{
+    border: solid;
+    width:80%; height:50%;  
+    border-color: #F3F3F3;
+}  
+.title{
+    margin-top: 0px;
+}
+.box1{
+    text-align: center;
+    margin : auto;
+    float: left;
+    margin-top: 3px;
+    margin-left: 10px;
+    width: 150px;
+    height: 60px;
+    background-color: #F0EFC9;
+    box-shadow: 1px 3px 3px
+}
+.text{
+    text-align: center;
+    padding: auto;
+}
+.btn{
+    text-align: center;
+    margin : auto;
+    float: left;
+    margin-top: 3px;
+    margin-left: 10px;
+    width: 70px;
+    height: 60px;
+    background-color: #F0EFC9;
+    box-shadow: 1px 3px 3px
+}
