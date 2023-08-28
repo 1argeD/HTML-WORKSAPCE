@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script>
+        function calc() {
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+
+            var sum;
+            sum = parseInt(x) + parseInt(y);
+            document.getElementById("sum").value = sum;
+        }
+    </script>
+
+</head>
+<body>
+        <form>
+            <h3>더하기</h3>
+            x값 : 
+            <input id="x"></br>
+            y값 : 
+            <input id="y"></br>
+            합 :
+            <input id="sum"></br>
+            <input type = "button" value="계산" onclick="calc()"/>
+        </form>
+</body>
+</html>

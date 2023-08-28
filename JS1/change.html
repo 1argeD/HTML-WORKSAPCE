@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sub() {
+        var x = document.getElementById("name");
+        x.value = x.value.toLowerCase();
+    }
+    </script>
+ 
+    <script>
+        function OnButtonDown(button) {
+            button.style.color = "#ff0000";
+    } 
+        function OnButtonUp(button) {
+             button.style.color = "#000000";
+    }
+    </script>
+</head>
+<body>
+    <!-- onchage 이벤트는 필드에서 벗어날 경우 이벤트가 일어난다,-->  
+    영어단어: <input type="text" id="name" onchange="sub()">
+    <p>입력필드를 벗어나면 소문자로 변경됩니다.</p>
+    
+    <button onmousedown="OnButtonDown (this)" onmouseup="OnButtonUp
+    (this)">눌러보세요!</button>
+</body>
+</html>

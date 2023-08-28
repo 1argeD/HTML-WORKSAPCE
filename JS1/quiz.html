@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script>
+        function out() {
+            var ani = document.getElementById("ani").value;
+            
+            var spc = document.getElementById("spc").value;
+            
+            var output;
+            output = ani + "는" + spc;
+            document.getElementById("output").value = output;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        동물 : 
+        <input id = "ani"></br>
+        특징 : 
+        <input id = "spc"></br>
+        결과 : 
+        <input id = "output"></br>
+        <input type="button" value="결과" onclick="out();">
+    </form>
+</body>
+</html>

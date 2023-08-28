@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz1 동물특징결과 출력</title>
+
+   <script>
+    function animal(){
+
+        var name = document.getElementById("name").value;
+        var crit = document.getElementById("crit").value;
+       
+        var result;
+        resutl = name+"은(는)"+crit;
+        document.getElementById("result").value = result;
+    }
+
+   </script>
+
+</head>
+<body>
+    
+<h4>동물 특징</h4>
+
+    동물:
+    <input id="name"/> <br/>
+    특징:
+    <input id="crit"/> <br/>
+
+    결과:
+    <input id="result"/> <br/>
+    <input type="button" value="검색" onclick="animal();"/>
+    <script>
+        document.write(result+"<br>");
+    </script>
+</body>
+</html>
