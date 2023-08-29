@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                alert($("#dog").attr("src"));
+            })
+        })
+    </script>
+</head>
+<body>
+    <img id = "dog" src = "dog.jpg" alt="" width="120" height="100"/></br>
+    <button>attr()</button>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gettxt{
+            color: green;
+        }
+        .rtext {
+            color : red;
+        }
+    
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('button').click(
+            function(){
+                $.ajax({
+                    
+                    //데이터 요청 주소
+                    url:"http://192.168.35.63",
+                    
+                    //보내는 방법
+                    type : "get",
+                    
+                    //보내는 데이터
+                    data : {a:123},
+                    
+                    //캐쉬의 사용여부
+                    cache : "false",
+                
+                    //받는 데이터 형식(json,xml,text)
+                    dataType : "text",
+                    success : function(/*이곳에 적으면 변수*/data) {
+                        //성공일떄 동작할 함수
+                        console.log("받아온 데이터", data);
+                        temp=data.substr(0,2);
+                        humi=data.substr(2,2);
+                        console.log("temp : ", temp , "humi : ", humi);
+                        $("#temp").text(temp);
+                        $("#humi").text(humi);                       
+                    },
+                    error : function(request, status, error){
+                        //에러가 발생시 동작할 함수
+                        console.log("에러");
+                    }
+                });
+            }
+            );
+        });
+    </script>
+</head>
+<body>
+    <span class = "gettxt">온도 : </span> <span class = "rtext" id = "temp">25</span>도 </br>
+    <span class = "gettxt">습도 : </span> <span class = "rtext" id = "humi">40</span>% 
+    <button>눌러</button>
+</body>
+</html>
